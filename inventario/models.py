@@ -6,6 +6,8 @@ class Block_de_espuma(models.Model):
 
     modelo = models.CharField('tipo de espuma',max_length=200)
     lote = models.CharField(max_length=200)
+    numero_de_block = models.IntegerField('numero de block')
+    #lista de maquinas
     maquina = models.CharField(max_length=200)
     FIGURAS = (
         ('cilindro','cilindro'),
@@ -25,6 +27,7 @@ class Block_de_espuma(models.Model):
         ('muestra','muestra'),
         ('cambio','cambio')
     )
+    #reordenars
     tipo_de_unidad = models.CharField(max_length=50, choices=TIPOS_DE_UNIDAD)
     DEFECTOS = (
         ('pinhole','pinhole'),
@@ -34,4 +37,5 @@ class Block_de_espuma(models.Model):
         ('fuera de medida', 'fuera de medida'),
         ('algodonozo', 'algodonozo')
     )
+    #que blac = true
     defecto = models.CharField(max_length=50, choices=DEFECTOS)

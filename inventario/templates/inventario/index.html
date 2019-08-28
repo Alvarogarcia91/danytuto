@@ -1,0 +1,9 @@
+{% if blocks %}
+    <ul>
+    {%for block in blocks %}
+        <li> {{block.modelo}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay Bloques </p>
+{% endif %}
